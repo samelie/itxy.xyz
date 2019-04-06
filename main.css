@@ -1,0 +1,31 @@
+body{
+  overflow: hidden;
+}
+
+img{
+  position: absolute;
+  top:0;
+}
+
+.border{
+  position: absolute;
+  top:56%;
+  left:0;
+  height: 40px;
+  width: 100%;
+  background-color: black;
+  animation-duration: 3s;
+  animation-name: opac;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
