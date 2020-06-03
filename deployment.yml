@@ -15,7 +15,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: gke-test
+  name: itxy-xyz-github
 spec:
   replicas: 1
   strategy:
@@ -26,15 +26,15 @@ spec:
   template:
     metadata:
       labels:
-        app: gke-test
+        app: itxy-xyz-github
     spec:
       containers:
-      - name: gke-test
-        image: gcr.io/PROJECT_ID/IMAGE:TAG
-        ports:
-        - containerPort: 5000
-        resources:
-          requests:
-            cpu: 100m
-          limits:
-            cpu: 100m
+        - name: itxy-xyz-github
+          image: gcr.io/PROJECT_ID/IMAGE:TAG
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              cpu: 40m
+            limits:
+              cpu: 100m
