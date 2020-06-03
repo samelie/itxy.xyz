@@ -20,7 +20,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 80
+    - name: itxy-xyz-github-servicep
+      port: 80
       targetPort: 5000
   selector:
-    app: itxy-xyz-github
+    app: itxy-xyz

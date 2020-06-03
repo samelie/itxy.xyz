@@ -15,7 +15,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: itxy-xyz-github
+  name: itxy-xyz
   namespace: itxy
 spec:
   replicas: 1
@@ -27,11 +27,12 @@ spec:
   template:
     metadata:
       labels:
-        app: itxy-xyz-github
+        app: itxy-xyz
     spec:
       containers:
         - name: itxy-xyz
           image: gcr.io/PROJECT_ID/IMAGE:TAG
+          imagePullPolicy: Always #IfNotPresent
           ports:
             - containerPort: 5000
           resources:
