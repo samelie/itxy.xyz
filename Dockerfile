@@ -10,9 +10,13 @@
 # implied. See the License for the specific language governing permissions and limitations under the
 # License.
 
-FROM nginx
+FROM nginx:1.17.8-alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Override NGINX configuration.
+ENV NGINX_PORT="5000"
+EXPOSE $NGINX_PORT
 
 WORKDIR /usr/share/nginx/html
 COPY site .
