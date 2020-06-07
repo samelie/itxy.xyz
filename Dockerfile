@@ -12,12 +12,7 @@
 
 FROM nginx:1.17.8-alpine
 
-# Override NGINX configuration.
-ENV NGINX_PORT="5000"
-EXPOSE $NGINX_PORT
-
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-
 
 WORKDIR /usr/share/nginx/html
 COPY site .
